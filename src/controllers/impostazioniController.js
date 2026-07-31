@@ -10,6 +10,10 @@ exports.getStudio = (req, res) => {
             WHERE id = 1
         `).get();
 
+        console.log("===== DEBUG STUDIO =====");
+console.log("Logo dal DB:", studio?.logo);
+console.log("========================");
+
         res.json(studio || {});
 
     } catch (err) {
